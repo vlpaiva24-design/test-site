@@ -210,4 +210,68 @@ h1, h2, h3, .hero-text h1 {
 
 /* Внутренний фон через ::before */
 .category-large::before,
-.category-
+.category-small::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+  z-index: 0;
+  border-radius: 20px;
+}
+
+/* Пропорции блоков */
+.category-large {
+  flex: 2;
+  min-height: 300px;
+}
+.category-small {
+  flex: 1;
+  min-height: 300px;
+}
+
+/* Контент внутри блока */
+.category-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  z-index: 2;
+}
+
+.category-content h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.category-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Overlay для затемнения текста */
+.category-large::after,
+.category-small::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  transition: background 0.4s ease;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Hover эффект: параллакс внутри блока */
+.category-large:hover::before,
+.category-small:hover::before {
+  transform: scale(1.1);
+}
+
+.category-large:hover::after,
+.category-small:hover::after {
+  background: rgba(0,0,0,0.1);
+}
