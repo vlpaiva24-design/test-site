@@ -99,7 +99,7 @@ header .btn {
 
 .btn-primary {
   background: #00d084;
-  border: 0,5px solid #00ff88; 
+  border: 1px solid #00ff88; 
   color: #000;
 }
 
@@ -110,7 +110,7 @@ header .btn {
 
 .btn-secondary {
   background: transparent;
-  border: 0,5px solid #00ff88;
+  border: 1px solid #00ff88;
   color: #00d084;
 }
 
