@@ -168,8 +168,8 @@ h1, h2, h3, .hero-text h1 {
   gap: 20px;
 }
 
-.fade, h1, p, nav a, .btn-primary, .btn-secondary {
-  transition: opacity 1s ease;
+.fade, h1, p, nav a {
+  transition: opacity 0.5s ease;
 }
 
 .hidden {
