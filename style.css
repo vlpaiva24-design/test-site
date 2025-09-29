@@ -1,8 +1,8 @@
 /* Общий стиль */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #0f0f0f;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif; /* более современный шрифт */
+  background: #121212; /* мягкий тёмный фон вместо черного */
   color: #fff;
 }
 
@@ -12,7 +12,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background: #111;
+  background: rgba(17, 17, 17, 0.6); /* полупрозрачный фон */
+  position: fixed; /* фиксируем сверху */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px); /* эффект размытия */
 }
 
 .logo {
@@ -26,39 +31,45 @@ body {
   text-decoration: none;
   color: #ccc;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .navbar nav a:hover {
   color: #fff;
 }
 
+/* Кнопки */
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px; /* кнопки больше */
+  border-radius: 12px; /* более округлые углы */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease; /* плавная анимация */
+}
+
 .btn-primary {
   background: #00d084;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
   color: #000;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 .btn-primary:hover {
   background: #00b86b;
+  transform: translateY(-2px); /* лёгкий эффект при наведении */
 }
 
 .btn-secondary {
   background: transparent;
   border: 2px solid #00d084;
-  padding: 10px 20px;
-  border-radius: 8px;
   color: #00d084;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 .btn-secondary:hover {
   background: #00d084;
   color: #000;
+  transform: translateY(-2px);
 }
 
 /* Hero блок */
@@ -66,7 +77,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 10%;
+  padding: 120px 10% 0; /* больше отступ сверху из-за фиксированной шапки */
+  min-height: 100vh; /* растягиваем на весь экран */
+  box-sizing: border-box;
 }
 
 .hero-text {
@@ -74,7 +87,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 20px;
 }
 
@@ -86,33 +99,11 @@ body {
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .hero-image img {
   border-radius: 15px;
   max-width: 500px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-/* Инфо-блоки */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 60px 10%;
-  background: #1a1a1a;
-}
-
-.stat-card {
-  background: #111;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.stat-card h2 {
-  font-size: 32px;
-  color: #00d084;
-  margin-bottom: 10px;
 }
