@@ -1,8 +1,13 @@
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Inter', sans-serif;
   background: #000;
   color: #fff;
+}
+
+h1, h2, h3, .hero-text h1 {
+  font-family: 'Manrope', sans-serif;
+  /* Можно указать font-weight, например 600 или 700 */
 }
 
 /* Навбар */
