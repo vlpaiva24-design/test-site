@@ -107,3 +107,78 @@ body {
   max-width: 500px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
+
+/* Ограничиваем контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Шапка */
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+header .cta {
+  margin-left: 30px;
+}
+
+header .cta button {
+  background: #0e8968;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Блок достижений */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.stats .stat {
+  text-align: center;
+}
+
+.stats .stat h2 {
+  font-size: 36px;
+  color: #0e8968;
+  margin-bottom: 10px;
+}
+
+.stats .stat p {
+  font-size: 16px;
+  color: #555;
+}
