@@ -69,7 +69,6 @@ h1, h2, h3, .hero-text h1 {
 
 .btn-primary:hover {
   background: #00cc66;
-  transform: scale(0.3);
   transition: 0.9s;
 }
 
@@ -82,7 +81,6 @@ h1, h2, h3, .hero-text h1 {
 
 .btn-secondary:hover {
   background: rgba(255,255,255,0.15);
-  transform: scale(0.3);
   transition: 0.9s;
 }
 
