@@ -69,7 +69,7 @@ h1, h2, h3, .hero-text h1 {
 
 .btn-primary:hover {
   background: rgba(255,255,255,0.15);
-  color: #00ff88;
+  color: #ff00ff;
   border-color: #fff;
 }
 
@@ -82,7 +82,7 @@ h1, h2, h3, .hero-text h1 {
 
 .btn-secondary:hover {
   background: rgba(255,255,255,0.15);
-  color: #00ff88;
+  color: #ff00ff;
 }
 
 /* Hero с видео */
