@@ -177,58 +177,92 @@ h1, h2, h3, .hero-text h1 {
   opacity: 0;
 }
 
-/* Категории */
 .categories {
   padding: 80px 20px;
-  text-align: center;
-  background: #000;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .categories h2 {
   font-family: 'Manrope', sans-serif;
   font-size: 36px;
-  margin-bottom: 50px;
   font-weight: 700;
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.category-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.category-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.category-card span {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+  margin-bottom: 50px;
+  text-align: center;
   color: #fff;
 }
 
-.category-card:hover {
-  background: #0e8968;
+.categories-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-.category-card:hover img {
-  transform: scale(1.2);
+/* Большой блок */
+.category-large {
+  flex: 2;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Малый блок */
+.category-small {
+  flex: 1;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Контент внутри блока */
+.category-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  z-index: 2;
+}
+
+.category-content h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.category-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Анимация при наведении */
+.category-large:hover,
+.category-small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.category-large::after,
+.category-small::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  transition: background 0.4s ease;
+  border-radius: 20px;
+}
+
+.category-large:hover::after,
+.category-small:hover::after {
+  background: rgba(0,0,0,0.1);
+}
