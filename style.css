@@ -58,7 +58,7 @@ h1, h2, h3, .hero-text h1 {
   font-size: 15px;
   cursor: pointer;
   font-weight: 600;
-  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
 }
 
 .btn-primary {
