@@ -57,13 +57,13 @@ h1, h2, h3, .hero-text h1 {
   border: 1px solid transparent;
   font-size: 15px;
   cursor: pointer;
-  transition: all 1s ease;
   font-weight: 600;
 }
 
 .btn-primary {
   background: #00ff88;
   color: #000;
+  transition: all 1s ease;
 }
 
 .btn-primary:hover {
@@ -75,6 +75,7 @@ h1, h2, h3, .hero-text h1 {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
+  transition: all 1s ease;
 }
 
 .btn-secondary:hover {
