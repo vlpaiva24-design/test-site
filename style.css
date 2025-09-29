@@ -43,7 +43,7 @@ h1, h2, h3, .hero-text h1 {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.9s;
 }
 
 .navbar nav a:hover {
