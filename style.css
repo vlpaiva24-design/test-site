@@ -47,12 +47,13 @@ body {
 
 .btn-primary,
 .btn-secondary {
-  padding: 12px 24px;
+  padding: 10px 22px;
   border-radius: 8px;
   border: 2px solid transparent;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -71,7 +72,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.15);
 }
 
 /* Hero с видео */
