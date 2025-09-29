@@ -1,9 +1,13 @@
 /* Общий стиль */
 body {
   margin: 0;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif; /* более современный шрифт */
+  font-family: "Inter", sans-serif; /* основной шрифт для текста */
   background: #121212; /* мягкий тёмный фон вместо черного */
   color: #fff;
+}
+h1, h2, h3, .hero h1 {
+  font-family: "Montserrat", sans-serif; /* акцентный для заголовков */
+  font-weight: 700;
 }
 
 /* Навбар */
