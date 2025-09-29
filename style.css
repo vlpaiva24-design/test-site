@@ -37,6 +37,54 @@ body {
 .navbar nav a:hover {
   color: #fff;
 }
+/* ======= HEADER ======= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px; /* сделал компактнее */
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+header nav {
+    flex: 1; /* навигация растягивается */
+    display: flex;
+    justify-content: center; /* центрируем меню */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header .btn {
+    margin-left: 20px; /* небольшое расстояние от меню */
+    padding: 12px 24px;
+    background: #00ff88;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease;
+    white-space: nowrap; /* не даём переноситься */
+}
 
 /* Кнопки */
 .btn-primary,
@@ -113,50 +161,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* Шапка */
-header {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-header nav {
-  display: flex;
-  gap: 20px;
-}
-
-header nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-header .cta {
-  margin-left: 30px;
-}
-
-header .cta button {
-  background: #0e8968;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
 }
 
 /* Блок достижений */
