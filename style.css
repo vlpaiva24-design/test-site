@@ -1,28 +1,118 @@
+/* Общий стиль */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
 }
 
-nav {
-  background: #0e8968;
-  padding: 1rem;
-  text-align: center;
+/* Навбар */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #111;
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00d084;
+}
+
+.navbar nav a {
+  margin: 0 15px;
   text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: #fff;
+}
+
+.btn-primary {
+  background: #00d084;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.btn-primary:hover {
+  background: #00b86b;
 }
 
-main {
-  padding: 2rem;
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00d084;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #00d084;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background: #00d084;
+  color: #000;
+}
+
+/* Hero блок */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-image img {
+  border-radius: 15px;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Инфо-блоки */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 60px 10%;
+  background: #1a1a1a;
+}
+
+.stat-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  color: #00d084;
+  margin-bottom: 10px;
 }
