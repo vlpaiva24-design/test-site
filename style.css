@@ -206,21 +206,9 @@ h1, h2, h3, .hero-text h1 {
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-}
-
-/* Внутренний фон через ::before */
-.category-large::before,
-.category-small::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: var(--bg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.5s ease;
-  z-index: 0;
-  border-radius: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* Пропорции блоков */
@@ -253,7 +241,7 @@ h1, h2, h3, .hero-text h1 {
   font-size: 16px;
 }
 
-/* Overlay для затемнения текста */
+/* Overlay для текста */
 .category-large::after,
 .category-small::after {
   content: '';
@@ -265,10 +253,10 @@ h1, h2, h3, .hero-text h1 {
   z-index: 1;
 }
 
-/* Hover эффект: параллакс внутри блока */
-.category-large:hover::before,
-.category-small:hover::before {
-  transform: scale(1.1);
+/* Hover эффект: картинка масштабируется внутри блока */
+.category-large:hover,
+.category-small:hover {
+  transform: scale(1.05); /* сам блок слегка масштабируется для эффекта параллакса */
 }
 
 .category-large:hover::after,
