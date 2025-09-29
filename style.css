@@ -48,7 +48,7 @@ body {
 .btn-primary,
 .btn-secondary {
   padding: 10px 22px;
-  border-radius: 8px;
+  border-radius: 25px;
   border: 2px solid transparent;
   font-size: 15px;
   cursor: pointer;
