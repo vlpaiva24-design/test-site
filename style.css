@@ -68,6 +68,7 @@ h1, h2, h3, .hero-text h1 {
 
 .btn-primary:hover {
   background: #00cc66;
+  transition: all 1s ease;
 }
 
 .btn-secondary {
@@ -78,6 +79,7 @@ h1, h2, h3, .hero-text h1 {
 
 .btn-secondary:hover {
   background: rgba(255,255,255,0.15);
+  transition: all 1s ease;
 }
 
 /* Hero с видео */
