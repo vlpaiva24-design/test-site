@@ -199,70 +199,15 @@ h1, h2, h3, .hero-text h1 {
   flex-wrap: wrap;
 }
 
-/* Большой блок */
-.category-large {
-  flex: 2;
-  min-height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Малый блок */
+/* Общие стили блоков */
+.category-large,
 .category-small {
-  flex: 1;
-  min-height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Контент внутри блока */
-.category-content {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #fff;
-  z-index: 2;
-}
-
-.category-content h3 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.category-content p {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-}
-
-/* Анимация при наведении */
-.category-large:hover,
-.category-small:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.category-large::after,
-.category-small::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  transition: background 0.4s ease;
   border-radius: 20px;
+  cursor: pointer;
 }
 
-.category-large:hover::after,
-.category-small:hover::after {
-  background: rgba(0,0,0,0.1);
-}
+/* Внутренний фон через ::before */
+.category-large::before,
+.category-
