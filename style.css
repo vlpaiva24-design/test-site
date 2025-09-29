@@ -154,11 +154,10 @@ h1, h2, h3, .hero-text h1 {
   gap: 20px;
 }
 
-.fade {
+.fade, h1, p, nav a, .btn-primary, .btn-secondary {
   transition: opacity 0.3s ease;
-  opacity: 1;
 }
 
-.fade.hidden {
+.hidden {
   opacity: 0;
 }
