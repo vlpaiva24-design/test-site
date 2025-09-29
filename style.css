@@ -68,7 +68,8 @@ h1, h2, h3, .hero-text h1 {
 }
 
 .btn-primary:hover {
-  background: #00cc66;
+  background: rgba(255,255,255,0.15);
+  color: #00ff88;
   border-color: #fff;
 }
 
