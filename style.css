@@ -12,10 +12,19 @@ body {
   width: 100%;
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* центрируем всё */
   align-items: center;
   z-index: 1000;
   background: rgba(0,0,0,0.3);
+}
+
+/* Внутренний контейнер */
+.navbar-inner {
+  max-width: 1200px;      /* ширина контейнера */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar .logo {
