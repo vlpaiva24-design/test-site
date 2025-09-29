@@ -1,109 +1,100 @@
-/* Общий стиль */
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif; /* более современный шрифт */
-  background: #121212; /* мягкий тёмный фон вместо черного */
-  color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background-color: #111; /* мягкий тёмный фон */
+    color: #fff;
 }
 
-/* Навбар */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background: rgba(17, 17, 17, 0.6); /* полупрозрачный фон */
-  position: fixed; /* фиксируем сверху */
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(8px); /* эффект размытия */
+/* ======= HEADER ======= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: rgba(0, 0, 0, 0.3); /* прозрачный фон */
+    backdrop-filter: blur(6px);
+    z-index: 1000;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00d084;
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00ff88;
 }
 
-.navbar nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 500;
-  transition: color 0.3s ease;
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar nav a:hover {
-  color: #fff;
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-/* Кнопки */
-.btn-primary,
-.btn-secondary {
-  padding: 14px 28px; /* кнопки больше */
-  border-radius: 12px; /* более округлые углы */
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.4s ease; /* плавная анимация */
+header nav ul li a:hover {
+    color: #00ff88;
 }
 
-.btn-primary {
-  background: #00d084;
-  border: none;
-  color: #000;
+header .btn {
+    padding: 12px 24px;
+    background: #00ff88;
+    color: #000;
+    border: none;
+    border-radius: 12px; /* закругление */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease;
 }
 
-.btn-primary:hover {
-  background: #00b86b;
-  transform: translateY(-2px); /* лёгкий эффект при наведении */
+header .btn:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
 }
 
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #00d084;
-  color: #00d084;
-}
-
-.btn-secondary:hover {
-  background: #00d084;
-  color: #000;
-  transform: translateY(-2px);
-}
-
-/* Hero блок */
+/* ======= HERO (баннер) ======= */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 120px 10% 0; /* больше отступ сверху из-за фиксированной шапки */
-  min-height: 100vh; /* растягиваем на весь экран */
-  box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    min-height: 100vh; /* растягиваем на весь экран */
+    box-sizing: border-box;
 }
 
 .hero-text {
-  max-width: 50%;
+    max-width: 50%;
 }
 
 .hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .hero-text p {
-  font-size: 18px;
-  color: #aaa;
-  margin-bottom: 30px;
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 15px;
 }
 
-.hero-image img {
-  border-radius: 15px;
-  max-width: 500px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
+.hero-but
