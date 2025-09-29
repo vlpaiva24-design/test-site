@@ -199,26 +199,30 @@ h1, h2, h3, .hero-text h1 {
   flex-wrap: wrap;
 }
 
-/* Общие стили блоков */
-.category-large,
-.category-small {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-/* Пропорции блоков */
+/* Большой блок */
 .category-large {
   flex: 2;
   min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+/* Малый блок */
 .category-small {
   flex: 1;
   min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Контент внутри блока */
@@ -241,7 +245,13 @@ h1, h2, h3, .hero-text h1 {
   font-size: 16px;
 }
 
-/* Overlay для текста */
+/* Анимация при наведении */
+.category-large:hover,
+.category-small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
 .category-large::after,
 .category-small::after {
   content: '';
@@ -250,13 +260,6 @@ h1, h2, h3, .hero-text h1 {
   background: rgba(0,0,0,0.3);
   transition: background 0.4s ease;
   border-radius: 20px;
-  z-index: 1;
-}
-
-/* Hover эффект: картинка масштабируется внутри блока */
-.category-large:hover,
-.category-small:hover {
-  transform: scale(1.05); /* сам блок слегка масштабируется для эффекта параллакса */
 }
 
 .category-large:hover::after,
