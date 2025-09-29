@@ -176,3 +176,59 @@ h1, h2, h3, .hero-text h1 {
 .hidden {
   opacity: 0;
 }
+
+/* Категории */
+.categories {
+  padding: 80px 20px;
+  text-align: center;
+  background: #000;
+}
+
+.categories h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.category-card span {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.category-card:hover {
+  background: #0e8968;
+}
+
+.category-card:hover img {
+  transform: scale(1.2);
+}
+
