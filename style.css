@@ -7,182 +7,159 @@
 
 body {
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  background-color: #0f0f0f;
+  background-color: #111; /* мягкий черный */
   color: #fff;
   line-height: 1.6;
 }
 
-/* Для контейнера внутри header, чтобы не растягивать всё */
-header {
-  width: 100%;
-  padding: 20px 40px;
-  box-sizing: border-box;
-}
-
-header .navbar { /* если у тебя .navbar используется */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Навбар */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.7); /* прозрачный фон */
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
-}
-
-/* Навигация */
-.navbar nav {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar nav a {
-  margin: 0 15px;
-}
-
-/* Кнопка “Оставить заявку” */
-header .btn-primary {
-  margin-left: 20px;
-  white-space: nowrap; /* не даём кнопке переноситься */
-}
-
-/* Блок статистики */
-.stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; /* чтобы на узких экранах не ломалось */
-  gap: 20px;
-  padding: 60px 40px;
-  box-sizing: border-box;
+  height: 70px;
 }
 
 .logo {
   font-size: 22px;
   font-weight: 700;
-}
-.logo span {
-  font-weight: 400;
+  color: #00ff88;
 }
 
-.navbar nav a {
-  margin: 0 15px;
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.langs button {
-  background: #1e1e1e;
-  border: none;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.phone {
-  font-size: 14px;
-}
-.phone a {
-  display: block;
-  font-size: 12px;
-  color: #7ed6df;
-  text-decoration: none;
+.nav-links a:hover {
+  color: #00ff88;
 }
 
 /* Кнопки */
-.btn-primary {
-  background: #fff;
-  color: #000;
-  padding: 10px 20px;
+.btn-primary,
+.btn-secondary {
+  padding: 12px 25px;
   border-radius: 30px;
-  border: none;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
 }
+
+.btn-primary {
+  background: #00ff88;
+  color: #111;
+  border-color: #00ff88;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: #00ff88;
+}
+
 .btn-secondary {
   background: transparent;
-  color: #fff;
-  padding: 10px 20px;
-  border: 1px solid #555;
-  border-radius: 30px;
-  cursor: pointer;
+  color: #00ff88;
+  border: 2px solid #00ff88;
 }
 
-/* Hero */
+.btn-secondary:hover {
+  background: #00ff88;
+  color: #111;
+}
+
+/* Hero блок */
 .hero {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 60px 50px;
+  align-items: center;
+  padding-top: 100px; /* чтобы не перекрывал navbar */
 }
 
-.hero-left {
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
   flex: 1;
-  padding-right: 40px;
 }
-.hero-left .category {
-  font-size: 14px;
-  color: #7ed6df;
-  text-transform: uppercase;
-}
-.hero-left h1 {
+
+.hero-text h1 {
   font-size: 42px;
-  margin: 15px 0;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-.hero-left p {
-  max-width: 400px;
-  margin-bottom: 25px;
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 500px;
   color: #ccc;
 }
+
 .hero-buttons {
   display: flex;
   gap: 15px;
 }
 
-/* Правая часть */
-.hero-right {
+.hero-image {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
-.preview img {
-  max-width: 100%;
+
+.hero-image img {
   border-radius: 15px;
+  max-width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
+/* Статистика */
 .stats {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  background: #181818;
+  padding: 80px 0;
 }
 
-.stats .stat {
-  flex: 1;
-  min-width: 150px; /* чтобы не схлопывалось */
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
+.stats-container {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+
 .stat h2 {
   font-size: 36px;
-  margin-bottom: 10px;
+  font-weight: 700;
   color: #00ff88;
 }
 
 .stat p {
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 18px;
   color: #ccc;
-}
-
-.stat span {
-  font-size: 12px;
-  color: #888;
 }
