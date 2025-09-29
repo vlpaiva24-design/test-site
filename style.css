@@ -43,7 +43,7 @@ h1, h2, h3, .hero-text h1 {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: color 0.9s;
+  transition: color 0.5s;
 }
 
 .navbar nav a:hover {
@@ -58,30 +58,30 @@ h1, h2, h3, .hero-text h1 {
   font-size: 15px;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.9s;
+  transition: 0.5s;
 }
 
 .btn-primary {
   background: #00ff88;
   color: #000;
-  transition: 0.9s;
+  transition: 0.5s;
 }
 
 .btn-primary:hover {
   background: #00cc66;
-  transition: 0.9s;
+  transition: 0.5s;
 }
 
 .btn-secondary {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  transition: 0.9s;
+  transition: 0.5s;
 }
 
 .btn-secondary:hover {
   background: rgba(255,255,255,0.15);
-  transition: 0.9s;
+  transition: 0.5s;
 }
 
 /* Hero с видео */
