@@ -64,22 +64,26 @@ h1, h2, h3, .hero-text h1 {
 .btn-primary {
   background: #00ff88;
   color: #000;
+  transition: 0.9s;
 }
 
 .btn-primary:hover {
   background: #00cc66;
-  transform: scale(1.05);
+  transform: scale(0.3);
+  transition: 0.9s;
 }
 
 .btn-secondary {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
+  transition: 0.9s;
 }
 
 .btn-secondary:hover {
   background: rgba(255,255,255,0.15);
-  transform: scale(1.05);
+  transform: scale(0.3);
+  transition: 0.9s;
 }
 
 /* Hero с видео */
