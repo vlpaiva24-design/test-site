@@ -1,165 +1,121 @@
-/* Общие стили */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  background-color: #111; /* мягкий черный */
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000;
   color: #fff;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* Навбар */
 .navbar {
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
-  z-index: 1000;
-  background: rgba(17, 17, 17, 0.7); /* прозрачный фон */
-  backdrop-filter: blur(10px);
-}
-
-.nav-container {
+  width: 100%;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  z-index: 1000;
+  background: rgba(0,0,0,0.3);
 }
 
-.logo {
+.navbar .logo {
   font-size: 22px;
   font-weight: 700;
-  color: #00ff88;
+  color: #fff;
 }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
+.navbar nav a {
+  margin: 0 15px;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.navbar nav a:hover {
   color: #00ff88;
 }
 
-/* Кнопки */
 .btn-primary,
 .btn-secondary {
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.4s ease;
-  border: 2px solid transparent;
 }
 
 .btn-primary {
   background: #00ff88;
-  color: #111;
-  border-color: #00ff88;
+  color: #000;
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: #00ff88;
+  background: #00cc66;
 }
 
 .btn-secondary {
   background: transparent;
-  color: #00ff88;
-  border: 2px solid #00ff88;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .btn-secondary:hover {
-  background: #00ff88;
-  color: #111;
+  background: rgba(255,255,255,0.2);
 }
 
-/* Hero блок */
+/* Hero с видео */
 .hero {
-  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px; /* чтобы не перекрывал navbar */
+  justify-content: center;
+  overflow: hidden;
 }
 
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
-.hero-text {
-  flex: 1;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
 }
 
-.hero-text h1 {
-  font-size: 42px;
-  font-weight: 700;
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
-.hero-text p {
+.hero-content p {
   font-size: 18px;
   margin-bottom: 30px;
-  max-width: 500px;
-  color: #ccc;
+  line-height: 1.6;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
-}
-
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  border-radius: 15px;
-  max-width: 100%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-/* Статистика */
-.stats {
-  background: #181818;
-  padding: 80px 0;
-}
-
-.stats-container {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.stat h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #00ff88;
-}
-
-.stat p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #ccc;
+  justify-content: center;
+  gap: 20px;
 }
