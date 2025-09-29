@@ -10,51 +10,29 @@
 <body>
   <!-- Навбар -->
   <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo">JustGo</div>
-      <nav class="nav-links">
-        <a href="#">Главная</a>
-        <a href="#">Как это работает</a>
-        <a href="#">О нас</a>
-        <a href="#">Контакты</a>
-      </nav>
-      <button class="btn-primary">Присоединиться</button>
-    </div>
+    <div class="logo">JustGo</div>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">Как это работает</a>
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
+    </nav>
+    <button class="btn-primary">Присоединиться</button>
   </header>
 
-  <!-- Hero блок -->
+  <!-- Hero с видео -->
   <section class="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <h1>Находи людей для прогулок, концертов и приключений</h1>
-        <p>JustGo — сервис для тех, кто не хочет проводить время в одиночку. 
-           Совместные пробежки, походы, спорт, концерты и путешествия. 
-           Здесь находят компанию для любых активностей.</p>
-        <div class="hero-buttons">
-          <button class="btn-primary">Найти компанию</button>
-          <button class="btn-secondary">Как это работает?</button>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/justgo.png" alt="Встречи и активный отдых">
-      </div>
-    </div>
-  </section>
-
-  <!-- Инфо-блоки -->
-  <section class="stats">
-    <div class="container stats-container">
-      <div class="stat">
-        <h2>10,000+</h2>
-        <p>Участников</p>
-      </div>
-      <div class="stat">
-        <h2>500+</h2>
-        <p>Событий</p>
-      </div>
-      <div class="stat">
-        <h2>50+</h2>
-        <p>Городов</p>
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/video/bg.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Находи людей для прогулок, концертов и приключений</h1>
+      <p>JustGo — сервис для тех, кто не хочет проводить время в одиночку. 
+         Совместные пробежки, походы, спорт, концерты и путешествия.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Найти компанию</button>
+        <button class="btn-secondary">Как это работает?</button>
       </div>
     </div>
   </section>
