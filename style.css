@@ -153,3 +153,12 @@ h1, h2, h3, .hero-text h1 {
   justify-content: center;
   gap: 20px;
 }
+
+.fade {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.fade.hidden {
+  opacity: 0;
+}
