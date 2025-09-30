@@ -4,64 +4,363 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JustGo — вместе веселее</title>
+  <!-- Подключение CSS -->
   <link rel="stylesheet" href="style.css">
+  <!-- Подключение шрифтов -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <!-- Навбар -->
+
+  <!-- Навигационная панель (header) -->
   <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo">JustGo</div>
-    <nav>
-      <a href="#">Главная</a>
-      <a href="#">Как это работает</a>
-      <a href="#">О нас</a>
-      <a href="#">Контакты</a>
-    </nav>
-   <div class="auth-buttons">
-  <button class="btn-primary">Регистрация</button>
-  <button class="btn-secondary">Войти</button>
-</div>
-    <div class="lang-switch">
-  <button id="ru-btn" class="lang-btn active">RU</button> |
-  <button id="uz-btn" class="lang-btn">UZ</button>
-</div>
-  </div>
-</header>
-
-
-  <!-- Hero с видео -->
-  <section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="assets/video/bg.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Находи друзей и подруг для общего времяпровождения</h1>
-      <p>JustGo — сервис для тех, кто не хочет проводить время в одиночку. 
-         Совместные пробежки, походы, спорт, концерты, путешествия и многое другое.</p>
-      <div class="hero-buttons">
-        <button class="btn-primary">Создать ветку</button>
-        <button class="btn-secondary">Присоединиться</button>
+    <div class="navbar-inner">
+      <!-- Логотип -->
+      <div class="logo">JustGo</div>
+      <!-- Основное меню -->
+      <nav>
+        <a href="#">Главная</a>
+        <a href="#">Как это работает</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <!-- Кнопки авторизации -->
+      <div class="auth-buttons">
+        <button class="btn-primary">Регистрация</button>
+        <button class="btn-secondary">Войти</button>
+      </div>
+      <!-- Переключатель языка -->
+      <div class="lang-switch">
+        <button id="ru-btn" class="lang-btn active">RU</button> |
+        <button id="uz-btn" class="lang-btn">UZ</button>
       </div>
     </div>
-  </section>
-  <script src="script.js"></script>
+  </header>
+
+  <!-- Основной контейнер страницы -->
+  <div id="wrapper">
+
+    <!-- Hero секция с видео -->
+    <section class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/video/bg.mp4" type="video/mp4">
+      </video>
+      <div class="overlay"></div> <!-- затемнение поверх видео -->
+      <div class="hero-content">
+        <h1>Находи друзей и подруг для общего времяпровождения</h1>
+        <p>JustGo — сервис для тех, кто не хочет проводить время в одиночку. 
+           Совместные пробежки, походы, спорт, концерты, путешествия и многое другое.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary">Создать ветку</button>
+          <button class="btn-secondary">Присоединиться</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция категорий активности -->
+    <section class="categories">
+      <h2>Категории активности</h2>
+
+      <!-- Ряд категорий -->
+      <div class="categories-row">
+        <!-- Большой блок категории -->
+        <div class="category-large">
+          <div class="bg" style="background-image: url('assets/images/11.jpg')"></div>
+          <div class="category-content">
+            <h3>Спорт</h3>
+            <p>Присоединяйся к пробежкам и спортивным событиям</p>
+          </div>
+        </div>
+
+        <!-- Малый блок категории -->
+        <div class="category-small">
+          <div class="bg" style="background-image: url('assets/images/7.jpg')"></div>
+          <div class="category-content">
+            <h3>Кино</h3>
+            <p>Совместные походы в кино и обсуждение фильмов</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Еще один ряд категорий (аналогично предыдущему) -->
+      <div class="categories-row">
+        <div class="category-small">
+          <div class="bg" style="background-image: url('assets/images/8.jpg')"></div>
+          <div class="category-content">
+            <h3>Прогулки</h3>
+            <p>Гуляй с друзьями по интересным маршрутам</p>
+          </div>
+        </div>
+        <div class="category-large">
+          <div class="bg" style="background-image: url('assets/images/10.jpg')"></div>
+          <div class="category-content">
+            <h3>Еда</h3>
+            <p>Совместные походы в кафе и рестораны</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Последующие ряды категорий идут аналогично, каждый содержит большой и малый блок -->
+      <div class="categories-row">
+        <div class="category-large">
+          <div class="bg" style="background-image: url('assets/images/12.jpg')"></div>
+          <div class="category-content">
+            <h3>Фотосессии</h3>
+            <p>Создавай яркие кадры вместе с новыми друзьями</p>
+          </div>
+        </div>
+        <div class="category-small">
+          <div class="bg" style="background-image: url('assets/images/13.jpg')"></div>
+          <div class="category-content">
+            <h3>Квизы</h3>
+            <p>Проверяй свои знания и соревнуйся с новой командой</p>
+          </div>
+        </div>
+      </div>
+
+<div class="categories-row">
+    <!-- Малый блок 7 -->
+    <div class="category-small">
+      <div class="bg" style="background-image: url('assets/images/14.jpg')"></div>
+      <div class="category-content">
+        <h3>Выставки</h3>
+        <p>Посещай интересные экспозиции и удивляй друзей</p>
+      </div>
+    </div>
+
+    <!-- Большой блок 8 -->
+    <div class="category-large">
+      <div class="bg" style="background-image: url('assets/images/16.jpg')"></div>
+      <div class="category-content">
+        <h3>Путешествия</h3>
+        <p>Исследуй города и страны вместе с другими</p>
+      </div>
+    </div>
+  </div>
+
+<div class="categories-row">
+    <!-- Большой блок 9 -->
+    <div class="category-large">
+      <div class="bg" style="background-image: url('assets/images/17.jpg')"></div>
+      <div class="category-content">
+        <h3>Фестивали</h3>
+        <p>Врывайся в атмосферу музыки, еды и развлечений</p>
+      </div>
+    </div>
+
+    <!-- Малый блок 10 -->
+    <div class="category-small">
+      <div class="bg" style="background-image: url('assets/images/18.jpg')"></div>
+      <div class="category-content">
+        <h3>Квесты</h3>
+        <p>Решай загадки и проходи увлекательные игры</p>
+      </div>
+    </div>
+  </div>
+
+<div class="categories-row">
+    <!-- Малый блок 11 -->
+    <div class="category-small">
+      <div class="bg" style="background-image: url('assets/images/19.jpg')"></div>
+      <div class="category-content">
+        <h3>Клубы</h3>
+        <p>Вечеринки и встречи для интересного общения	</p>
+      </div>
+    </div>
+
+    <!-- Большой блок 12 -->
+    <div class="category-large">
+      <div class="bg" style="background-image: url('assets/images/20.jpg')"></div>
+      <div class="category-content">
+        <h3>Концерты</h3>
+        <p>Наслаждайся живой музыкой с друзьями</p>
+      </div>
+    </div>
+  </div>
+
+<div class="categories-row">
+    <!-- Большой блок 13 -->
+    <div class="category-large">
+      <div class="bg" style="background-image: url('assets/images/21.jpg')"></div>
+      <div class="category-content">
+        <h3>Экстрим</h3>
+        <p>Адреналиновые развлечения и острые ощущения</p>
+      </div>
+    </div>
+
+    <!-- Малый блок 14 -->
+    <div class="category-small">
+      <div class="bg" style="background-image: url('assets/images/22.jpg')"></div>
+      <div class="category-content">
+        <h3>Спонтанно</h3>
+        <p>Действуй сиюминутно и участвуй в неожиданных событиях</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Лента публикаций -->
+    <section class="feed-wrapper">
+      <h2 class="feed-title">Лента</h2>
+      <div class="feed">
+        <!-- Карточка поста -->
+        <div class="feed-card">
+          <div class="feed-header">
+            <img src="assets/images/1.jpg" alt="user" class="avatar">
+            <div class="feed-user">
+              <strong>suprememicah</strong>
+              <span class="time">23 ч.</span>
+            </div>
+          </div>
+          <div class="feed-content">
+            <p>"I will sleep early tonight"</p>
+            <p>me watching the sun rise at 6AM</p>
+            <img src="assets/images/666.jpg" alt="post image">
+          </div>
+          <div class="feed-actions">
+            <!-- Кнопка лайка -->
+            <button class="like-btn">
+              <svg class="heart" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+                         4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 
+                         14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                         6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <span class="like-count">666</span>
+            </button>
+            <!-- Кнопка комментария -->
+            <button class="comment-btn">
+              <svg class="comment-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M21 6h-18c-1.1 0-2 .9-2 2v12l4-4h16c1.1 0 2-.9 2-2v-6c0-1.1-.9-2-2-2z"/>
+              </svg>
+              <span class="comment-count">3</span>
+            </button>
+          </div>
+        </div>
+
+    <div class="feed-card">
+      <div class="feed-header">
+        <img src="assets/images/2.jpg" alt="user" class="avatar">
+        <div class="feed-user">
+          <strong>nasaspaceflight</strong>
+          <span class="time">8 ч.</span>
+        </div>
+      </div>
+      <div class="feed-content">
+        <p>Meanwhile on the Space Coast...</p>
+        <img src="assets/images/3.jpg" alt="post image">
+      </div>
+      <div class="feed-actions">
+        <button class="like-btn">
+  <svg class="heart" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+             4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 
+             14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+             6.86-8.55 11.54L12 21.35z"/>
+  </svg>
+  <span class="like-count">666</span>
+</button>
+        <button class="comment-btn">
+  <svg class="comment-icon" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M21 6h-18c-1.1 0-2 .9-2 2v12l4-4h16c1.1 0 2-.9 2-2v-6c0-1.1-.9-2-2-2z"/>
+  </svg>
+  <span class="comment-count">3</span>
+</button>
+      </div>
+    </div>
+
+<div class="feed-card">
+      <div class="feed-header">
+        <img src="assets/images/2.jpg" alt="user" class="avatar">
+        <div class="feed-user">
+          <strong>nasaspaceflight</strong>
+          <span class="time">8 ч.</span>
+        </div>
+      </div>
+      <div class="feed-content">
+        <p>Meanwhile on the Space Coast...</p>
+        <img src="assets/images/3.jpg" alt="post image">
+      </div>
+      <div class="feed-actions">
+        <button class="like-btn">
+  <svg class="heart" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+             4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 
+             14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+             6.86-8.55 11.54L12 21.35z"/>
+  </svg>
+  <span class="like-count">666</span>
+</button>
+        <button class="comment-btn">
+  <svg class="comment-icon" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M21 6h-18c-1.1 0-2 .9-2 2v12l4-4h16c1.1 0 2-.9 2-2v-6c0-1.1-.9-2-2-2z"/>
+  </svg>
+  <span class="comment-count">3</span>
+</button>
+      </div>
+    </div>
+
+<!-- Футер ленты: кнопка "Смотреть всю ленту" -->
+        <div class="feed-footer">
+          <button class="see-more-btn">Смотреть всю ленту</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Основной футер сайта -->
+    <section class="footer-section">
+      <div class="footer-content">
+
+        <!-- Верхняя часть футера: ссылки и кнопки -->
+        <div class="footer-top">
+          <div class="footer-links-apps">
+            <div class="footer-columns">
+              <div class="footer-column">
+                <a href="#">Мобильные приложения</a>
+                <a href="#">Помощь и обратная связь</a>
+                <a href="#">Платные услуги</a>
+                <a href="#">Бизнес на JustGo</a>
+                <a href="#">Условия использования</a>
+              </div>
+              <div class="footer-column">
+                <a href="#">Как это работает?</a>
+                <a href="#">Категории</a>
+                <a href="#">Помощь</a>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <!-- Ссылки на мобильные приложения -->
+            <div class="footer-apps">
+              <a href="#"><img src="assets/images/app_store.svg" alt="App Store"></a>
+              <a href="#"><img src="assets/images/google_play.svg" alt="Google Play"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижняя часть футера: логотип и копирайт -->
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <span class="footer-logo-text">JustGo</span>
+          </div>
+          <div class="footer-bottom-center">
+            JustGo Company © 2025 All rights reserved
+          </div>
+          <div class="footer-bottom-right">
+            <a href="#">Соцсети</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подключение JS -->
+    <script src="script.js"></script>
+
+  </div>
+
+  <!-- Кнопка "Наверх" -->
+  <button id="scrollToTop" title="Наверх">↑</button>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
