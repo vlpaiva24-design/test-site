@@ -1,13 +1,18 @@
-// Элементы
+// Элементы языка
 const ruBtn = document.getElementById('ru-btn');
 const uzBtn = document.getElementById('uz-btn');
 
+// Элементы hero
 const heroTitle = document.querySelector('h1');
 const heroText = document.querySelector('p');
 const heroBtnPrimary = document.querySelector('.hero-buttons .btn-primary');
 const heroBtnSecondary = document.querySelector('.hero-buttons .btn-secondary');
+
+// Элементы авторизации
 const authBtnPrimary = document.querySelector('.auth-buttons .btn-primary');
 const authBtnSecondary = document.querySelector('.auth-buttons .btn-secondary');
+
+// Навигация
 const navLinks = document.querySelectorAll('header nav a');
 
 // Переводы
@@ -40,12 +45,11 @@ function changeTextWithFade(element, newText) {
   setTimeout(() => {
     element.textContent = newText;
     element.classList.remove('hidden');
-  }, 300); // совпадает с transition в CSS
+  }, 300);
 }
 
-// Универсальная функция смены языка
+// Смена языка
 function switchLanguage(lang) {
-  // Кнопки активного состояния
   if (lang === 'ru') {
     ruBtn.classList.add('active');
     uzBtn.classList.remove('active');
@@ -70,6 +74,72 @@ function switchLanguage(lang) {
   });
 }
 
-// События
+// События смены языка
 ruBtn.addEventListener('click', () => switchLanguage('ru'));
 uzBtn.addEventListener('click', () => switchLanguage('uz'));
+
+// Плавный скролл страницы с инерцией
+const ease = 0.09; // меньше — медленнее
+let current = 0;
+let target = 0;
+
+const wrapper = document.getElementById('wrapper');
+
+window.addEventListener('wheel', (e) => {
+  // Игнорируем скролл, если колесо над лентой
+  if (e.target.closest('.feed')) return;
+
+  target += e.deltaY;
+  const maxScroll = wrapper.scrollHeight - window.innerHeight;
+  if (target < 0) target = 0;
+  if (target > maxScroll) target = maxScroll;
+});
+
+function smoothScroll() {
+  current += (target - current) * ease;
+  wrapper.style.transform = `translateY(${-Math.round(current)}px)`;
+  requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
+
+// Лента
+const feed = document.querySelector('.feed');
+
+feed.addEventListener('mouseenter', () => {
+  document.body.style.overflow = 'hidden';
+});
+
+feed.addEventListener('mouseleave', () => {
+  document.body.style.overflow = '';
+});
+
+feed.addEventListener('wheel', (e) => {
+  const delta = e.deltaY;
+  const up = delta < 0 && feed.scrollTop === 0;
+  const down = delta > 0 && feed.scrollTop + feed.clientHeight >= feed.scrollHeight;
+  if (up || down) e.preventDefault();
+}, { passive: false });
+
+// Кнопка «Смотреть всю ленту»
+const seeMoreBtn = document.querySelector('.see-more-btn');
+seeMoreBtn.addEventListener('click', () => {
+  window.location.href = '/feed.html';
+});
+
+// Кнопка Наверх
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollBtn = document.getElementById('scrollToTop');
+
+  function updateScrollBtn() {
+    // показываем кнопку, если текущий скролл больше 300px
+    scrollBtn.style.display = current > 300 ? 'block' : 'none';
+    requestAnimationFrame(updateScrollBtn);
+  }
+
+  scrollBtn.addEventListener('click', () => {
+    target = 0;
+  });
+
+  updateScrollBtn();
+});
